@@ -345,6 +345,23 @@ public class Dexter {
 	    };
 	    return first[r.nextInt(first.length)] + " " + last[r.nextInt(last.length)];
 	}
+	/*
+	 * Genera un correo electrónico aleatorio basado en un nombre.
+	 * @return El correo electrónico generado.
+	 */
+	public static String toGetEmail(String name) {
+		name = toGetName().toLowerCase();
+		name.replace(" ", "");
+		String[] domains = {
+				"gmail.com", "yahoo.com", "outlook.com",
+				"hotmail.com", "aol.com", "icloud.com",
+				"mail.com", "protonmail.com", "zoho.com",
+				"gmx.com"
+		};
+		String domain = domains[r.nextInt(domains.length)];
+		String emailName = name.toLowerCase().replace(" ", ".");
+		return emailName + "@" + domain;
+	}
 	/* * Genera un departamento aleatorio.
 	 * @return El departamento generado.
 	 */

@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.Random;
 import java.util.Scanner;
 
-/*
+/**
  * Clase de utilidades varias para diferentes propósitos.
  * - Manejo de excepciones.
  * - Entrada de datos desde consola.
@@ -31,7 +31,7 @@ public class Dexter {
 	private static Random r = new Random();
 	private static Scanner scan = new Scanner(System.in);
 	
-	/*
+	/**
 	 * Manejo de excepciones: Imprime el tipo de excepción,
 	 * la línea donde ocurrió y el mensaje asociado.
 	 * @param e La excepción a manejar.
@@ -41,7 +41,7 @@ public class Dexter {
 						+ e.getStackTrace()[0].getLineNumber() + ": " + e.getMessage());
 	}
 	
-	/*
+	/**
 	 * Entrada de datos desde consola: Solicita al usuario
 	 * una cadena no vacía.
 	 * @param s El mensaje a mostrar al usuario.
@@ -57,7 +57,7 @@ public class Dexter {
 		return line;
     }
 	
-	/*
+	/**
 	 * Entrada de datos desde consola: Solicita al usuario
 	 * un entero válido.
 	 * @param s El mensaje a mostrar al usuario.
@@ -81,7 +81,7 @@ public class Dexter {
 	    }
 	}
 	
-	/*
+	/**
 	 * Entrada de datos desde consola: Solicita al usuario
 	 * un long válido.
 	 * @param s El mensaje a mostrar al usuario.
@@ -93,7 +93,7 @@ public class Dexter {
 		return scan.nextLong();
 	}
 	
-	/*
+	/**
 	 * Entrada de datos desde consola: Solicita al usuario
 	 * un double válido.
 	 * @param s El mensaje a mostrar al usuario.
@@ -105,14 +105,14 @@ public class Dexter {
 		return scan.nextDouble();
 	}
 	
-	/*
+	/**
 	 * Limpia el buffer del scanner.
 	 */
 	public static void cleanBuffer() {
 		scan.nextLine();
 	}
 	
-	/*
+	/**
 	 * Genera un ID aleatorio compuesto por un número
 	 * de 8 dígitos seguido de una letra mayúscula.
 	 * @return El ID generado.
@@ -128,7 +128,7 @@ public class Dexter {
 		return Integer.toString(num) + ch[r.nextInt(1, 26)];
 	}
 	
-	/*
+	/**
 	 * Genera un número double aleatorio entre min y max.
 	 * @param min El valor mínimo (inclusive).
 	 * @param max El valor máximo (exclusive).
@@ -139,7 +139,7 @@ public class Dexter {
 		return d;
 	}
 	
-	/*
+	/**
 	 * Genera un valor booleano aleatorio.
 	 * @return El valor booleano generado.
 	 */
@@ -147,7 +147,7 @@ public class Dexter {
 		return r.nextBoolean();
 	}
 	
-	/*
+	/**
 	 * Imprime una cadena rodeada de signos iguales.
 	 * @param s La cadena a imprimir.
 	 */	
@@ -163,7 +163,7 @@ public class Dexter {
 		System.out.println();
 	}
 	
-	/*
+	/**
 	 * Selecciona aleatoriamente una cadena de un array dado.
 	 * @param s El array de cadenas.
 	 * @return La cadena seleccionada.
@@ -172,7 +172,7 @@ public class Dexter {
 		return s[r.nextInt(s.length)];
 	}
 	
-	/*
+	/**
 	 * Genera un número entero aleatorio.
 	 * @return El número entero generado.
 	 */
@@ -180,7 +180,7 @@ public class Dexter {
 		return r.nextInt();
 	}
 	
-	/*
+	/**
 	 * Selecciona aleatoriamente un entero de un array dado.
 	 * @param i El array de enteros.
 	 * @return El entero seleccionado.
@@ -189,7 +189,7 @@ public class Dexter {
 		return i[r.nextInt(i.length)];
 	}
 	
-	/*
+	/**
 	 * Genera un número entero aleatorio entre min y max.
 	 * @param min El valor mínimo (inclusive).
 	 * @param max El valor máximo (exclusive).
@@ -199,7 +199,7 @@ public class Dexter {
 		return r.nextInt(min, max);
 	}
 	
-	/*
+	/**
 	 * Verifica si un número es primo.
 	 * @param num El número a verificar.
 	 * @return true si el número es primo, false en caso contrario.
@@ -214,7 +214,7 @@ public class Dexter {
 	    return true;
 	}
 	
-	/*
+	/**
 	 * Genera un número long aleatorio entre min y max.
 	 * @param min El valor mínimo (inclusive).
 	 * @param max El valor máximo (exclusive).
@@ -224,7 +224,7 @@ public class Dexter {
 		return r.nextLong(min, max);
 	}
 	
-	/*
+	/**
 	 * Mide el tiempo de ejecución de una tarea dada.
 	 * @param task La tarea a medir.
 	 * @return El tiempo de ejecución en milisegundos.
@@ -235,7 +235,7 @@ public class Dexter {
         return System.currentTimeMillis() - start;
     }
 	
-	/*
+	/**
 	 * Muestra un progreso visual en la consola.
 	 * @param ch El carácter a utilizar para el progreso.
 	 * @param total El total de pasos en el progreso.
@@ -253,7 +253,7 @@ public class Dexter {
 	    System.out.println();
 	}
 	
-	/*
+	/**
 	 * Lee un archivo y cuenta los caracteres por línea.
 	 * @param archivo La ruta del archivo a leer.
 	 * @return El contenido del archivo como una cadena.
@@ -281,7 +281,7 @@ public class Dexter {
 		return builder.toString();
 	}
 	
-	/*
+	/**
 	 * Genera un nombre completo aleatorio.
 	 * @return El nombre generado.
 	 */
@@ -345,7 +345,7 @@ public class Dexter {
 	    };
 	    return first[r.nextInt(first.length)] + " " + last[r.nextInt(last.length)];
 	}
-	/*
+	/**
 	 * Genera un correo electrónico aleatorio basado en un nombre.
 	 * @return El correo electrónico generado.
 	 */
@@ -362,7 +362,7 @@ public class Dexter {
 		String emailName = name.toLowerCase().replace(" ", ".");
 		return emailName + "@" + domain;
 	}
-	/* * Genera un departamento aleatorio.
+	/** * Genera un departamento aleatorio.
 	 * @return El departamento generado.
 	 */
 	public static String toGetDepartment() {
@@ -373,7 +373,7 @@ public class Dexter {
 		};
 		return toGetString(departments);
 	}
-	/*
+	/**
 	 * Genera un salario aleatorio.
 	 * @return El salario generado.
 	 */
@@ -384,7 +384,7 @@ public class Dexter {
 		};
 		return toGetInteger(salaries);
 	}
-	/*
+	/**
 	 * Genera un título aleatorio compuesto por un
 	 * adjetivo, un sustantivo y un complemento.
 	 * @return El título generado.

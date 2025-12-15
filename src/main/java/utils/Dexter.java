@@ -31,6 +31,11 @@ public class Dexter {
 	private static Random r = new Random();
 	private static Scanner scan = new Scanner(System.in);
 	
+	// Para ficheros
+	public static final String SEMICOLON = ";";
+	public static final String PIPE = "|";
+	public static final String COMMA = ",";
+	
 	/**
 	 * Manejo de excepciones: Imprime el tipo de excepción,
 	 * la línea donde ocurrió y el mensaje asociado.
